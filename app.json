@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "SnapMacros",
+    "slug": "snapmacros",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#0f172a",
+      "resizeMode": "contain"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.snapmacros.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "SnapMacros uses the camera so you can photograph your meals to log them.",
+        "NSPhotoLibraryUsageDescription": "SnapMacros needs photo access so you can attach meal photos from your library."
+      }
+    },
+    "android": {
+      "package": "com.snapmacros.app",
+      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE"]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Allow SnapMacros to use the camera to photograph your meals.",
+          "photosPermission": "Allow SnapMacros to access your photos to attach meal images."
+        }
+      ]
+    ]
+  }
+}
